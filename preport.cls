@@ -12,18 +12,20 @@
 \ifx\ssec@font\@undefined\def\ssec@font{\large}\fi
 \ifx\sssec@font\@undefined\def\sssec@font{\normalsize}\fi
 
+\RequirePackage{ulem}
+
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                                    {2.0ex \@plus 1ex \@minus .2ex}%
                                    {1.3ex \@plus.2ex}%
-                                   {\normalfont\sec@font\underline}}
+                                   {\normalfont\sec@font\uline}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
                                      {1.25ex\@plus 1ex \@minus .2ex}%
                                      {1.0ex \@plus .2ex}%
-                                     {\normalfont\ssec@font\underline}}
+                                     {\normalfont\ssec@font\uline}}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
                                      {1.25ex\@plus 1ex \@minus .2ex}%
                                      {1.0ex \@plus .2ex}%
-                                     {\normalfont\sssec@font\underline}}
+                                     {\normalfont\sssec@font\uline}}
 
 \def\@maketitle{%
   \newpage
